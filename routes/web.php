@@ -11,8 +11,8 @@
 |
 */
 
-use App\Articles\ArticlesRepository;
 
+use App\Articles\ArticlesRepository;
 
 Route::get('/', function () {
     return view('articles.index', [

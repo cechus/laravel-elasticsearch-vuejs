@@ -17,7 +17,7 @@
             border-radius: 25px;
             border: 1px solid #ccc;
         }
-    
+
         .search-form .form-group input.form-control {
             padding-right: 20px;
             border: 0 none;
@@ -25,31 +25,31 @@
             box-shadow: none;
             display: block;
         }
-    
+
         .search-form .form-group input.form-control::-webkit-input-placeholder {
             display: none;
         }
-    
+
         .search-form .form-group input.form-control:-moz-placeholder {
             /* Firefox 18- */
             display: none;
         }
-    
+
         .search-form .form-group input.form-control::-moz-placeholder {
             /* Firefox 19+ */
             display: none;
         }
-    
+
         .search-form .form-group input.form-control:-ms-input-placeholder {
             display: none;
         }
-    
+
         .search-form .form-group:hover,
         .search-form .form-group.hover {
             width: 100%;
             border-radius: 4px 25px 25px 4px;
         }
-    
+
         .search-form .form-group span.form-control-feedback {
             position: absolute;
             top: -1px;
@@ -64,11 +64,12 @@
             left: initial;
             font-size: 14px;
         }
-    
+
         </style>
 </head>
 
 <body>
+
     {{-- <div class="container">
         <div class="row">
             <div class="panel panel-primary">
@@ -85,15 +86,15 @@
                             </form>
                         </div>
                     </div>
-            
+
                     <div class="row">
                         <div class="container">
                             @forelse ($articles as $article)
                             <article>
                                 <h2>{{ $article->title }}</h2>
-            
+
                                 <p>{{ $article->body }}</p>
-            
+
                                     <p class="well">
                                         {{ implode(', ', $article->tags ?: []) }}
                                     </p>
@@ -157,7 +158,7 @@
                         axios.get("/search?q=" + this.query)
                             .then(response => {
                                 this.results = response.data;
-    
+
                             })
                     }
                 },
@@ -168,9 +169,9 @@
                         this.search();
                     }
                 }
-    
+
             })
-    
+
     </script>
 </body>
 

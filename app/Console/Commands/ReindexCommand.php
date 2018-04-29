@@ -8,6 +8,7 @@ use Illuminate\Console\Command;
 
 class ReindexCommand extends Command
 {
+
     protected $name = "search:reindex";
     protected $description = "Indexes all articles to elasticsearch";
     private $search;
@@ -37,4 +38,5 @@ class ReindexCommand extends Command
 
         $this->info("\nDone!");
     }
+
 }

@@ -4,6 +4,7 @@ namespace App\Search;
 
 trait Searchable
 {
+
     public static function bootSearchable()
     {
         // This makes it easy to toggle the search feature flag
@@ -35,4 +36,5 @@ trait Searchable
         // data that's going to be searchable per model.
         return $this->toArray();
     }
+
 }

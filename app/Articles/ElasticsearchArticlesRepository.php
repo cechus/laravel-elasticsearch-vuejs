@@ -47,20 +47,20 @@ class ElasticsearchArticlesRepository implements ArticlesRepository
     {
         /**
          * The data comes in a structure like this:
-         * 
-         * [ 
-         *      'hits' => [ 
-         *          'hits' => [ 
-         *              [ '_source' => 1 ], 
-         *              [ '_source' => 2 ], 
+         *
+         * [
+         *      'hits' => [
+         *          'hits' => [
+         *              [ '_source' => 1 ],
+         *              [ '_source' => 2 ],
          *          ]
-         *      ] 
+         *      ]
          * ]
-         * 
+         *
          * And we only care about the _source of the documents.
         */
         $hits = array_pluck($items['hits']['hits'], '_source') ?: [];
-        
+
         $sources = array_map(function ($source) {
             // The hydrate method will try to decode this
             // field but ES gives us an array already.

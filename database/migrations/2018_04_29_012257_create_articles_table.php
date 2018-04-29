@@ -13,6 +13,7 @@ class CreateArticlesTable extends Migration
      */
     public function up()
     {
+
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
@@ -20,6 +21,7 @@ class CreateArticlesTable extends Migration
             $table->json('tags');
             $table->timestamps();
         });
+
     }
 
     /**

@@ -27,7 +27,6 @@ $factory->define(App\Article::class, function (Faker $faker) {
         ->random(2)
         ->values()
         ->all();
-
     return [
         'title' => $faker->sentence,
         'body' => $faker->text,

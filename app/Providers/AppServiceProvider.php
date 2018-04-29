@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
         $this->app->singleton(ArticlesRepository::class, function ($app) {
             // This is useful in case we want to turn-off our
             // search cluster or when deploying the search
@@ -51,4 +52,5 @@ class AppServiceProvider extends ServiceProvider
                 ->build();
         });
     }
+
 }
